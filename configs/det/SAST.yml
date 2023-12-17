@@ -85,8 +85,7 @@ Eval:
   dataset:
     name: SimpleDataSet
     data_dir: ./Data_detect/Text_Detect/valid
-    label_file_list:
-    - ./Data_detect/Text_Detect/valid/Label.txt
+    label_file_list: [./Data_detect/Text_Detect/valid/Label.txt]
     transforms:
     - DecodeImage:
         img_mode: BGR

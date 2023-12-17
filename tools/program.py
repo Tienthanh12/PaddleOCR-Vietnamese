@@ -56,8 +56,9 @@ class ArgsParser(ArgumentParser):
             return config
         for s in opts:
             s = s.strip()
-            k, v = s.split('=')
-            config[k] = yaml.load(v, Loader=yaml.Loader)
+            if '=' in s:
+                k, v = s.split('=', 1)
+                config[k] = yaml.load(v, Loader=yaml.Loader)
         return config
 
 
